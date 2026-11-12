@@ -11,6 +11,7 @@ def greet(name: str) -> str:
     """Small pure function so we have something to unit-test."""
     return f"Hello, {name.strip().title()}!"
 
+
 @app.get("/")
 def index():
     return {"host": socket.gethostname(), "greeting": greet("narxoz")}
